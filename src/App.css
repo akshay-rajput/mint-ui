@@ -1,0 +1,10 @@
+.App{
+    min-height: 100vh;
+}
+.app-main{
+    grid-template-rows: minmax(100vh, 1fr);
+}
+pre[class*="language-"] {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
