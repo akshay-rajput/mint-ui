@@ -70,7 +70,9 @@ function App() {
     setTopicList(copyAppIndex)
 
     // toggleMobileMenu
-    toggleMobileMenu()
+    // toggleMobileMenu()
+
+    setMobileMenu(false)
   }
 
   return (
