@@ -1,10 +1,10 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Sidebar({topicList, updateTopic}) {
+export default function Sidebar({topicList, isMobileMenuOpen, updateTopic}) {
 
     return (
-        <div className="app-sidebar p4 md:pl8 md:pr4 bgGray1 textGray5 gridColSpan3">
+        <div className={"app-sidebar p4 md:pl8 md:pr4 bgGray1 textGray5 gridColSpan12 md:gridColSpan3 "+ (isMobileMenuOpen?'showOnMobile' : 'hideOnMobile')}>
             <div className="">
                 {  topicList.map( section => {
                     const sectionHeadings = Object.keys(section);
