@@ -21,6 +21,12 @@ import HeroSections from './components/doc_patterns/HeroSections';
 function App() {
   const [TopicList, setTopicList] = useState(appIndex)
   const [activeTopicName, setActiveTopicName] = useState('Introduction');
+  const [isMobileMenuOpen, setMobileMenu] = useState(false) 
+
+  function toggleMobileMenu(){
+    console.log('call toggle')
+    setMobileMenu(prevState => !prevState);
+  }
   
   function changeTopicHandler(sectionName, topicName){
     // deep Copy the Topiclist
@@ -54,15 +60,18 @@ function App() {
     })
     // console.log('Copy: ', copyAppIndex)
     setTopicList(copyAppIndex)
+
+    // toggleMobileMenu
+    toggleMobileMenu()
   }
 
   return (
-    <div className="App bgWhite displayFlex flexCol">
+    <div className="App bgWhite displayFlex flexCol" style={{overflowY : isMobileMenuOpen ? 'hidden': 'auto'}}>
       <header>
         <Navbar></Navbar>
       </header>
-      <main className="app-main flexGrow displayGrid md:gridCols12 gridGap2">
-        <Sidebar topicList={TopicList}  updateTopic={changeTopicHandler}></Sidebar>
+      <main className="app-main flexGrow displayGrid md:gridCols12 md:gridGap2">
+        <Sidebar topicList={TopicList} isMobileMenuOpen={isMobileMenuOpen} updateTopic={changeTopicHandler}></Sidebar>
 
         {
             /* TopicList.map(topicData => Components[topicData.name]) */
@@ -72,7 +81,7 @@ function App() {
               }
             } */
         }
-        <div className="app-content md:gridColSpan9">
+        <div className="app-content gridColSpan12 md:gridColSpan9">
           { activeTopicName === 'Introduction' && <Introduction />}
           { activeTopicName === 'Avatars' && <Avatars />}
           { activeTopicName === 'Alerts' && <Alerts />}
@@ -87,6 +96,9 @@ function App() {
 
         </div>
         
+        <button onClick={toggleMobileMenu} className="app-index-toggle bgTeal4 hover:bgTeal6 hover:textWhite borderNone roundedFull p3">
+          <i className={ isMobileMenuOpen ? "fas fa-times":"fas fa-bars"}></i>
+        </button>
       </main>
     </div>
   );
