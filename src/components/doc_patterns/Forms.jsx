@@ -28,7 +28,7 @@ export default function Forms() {
         <div class="displayFlex flexCol mb8">
             <label for="" class="mb4">Inline form</label>
             <div class="border borderGray3 p4 rounded">
-                <div class="inline-form displayFlex itemsCenter wFull mt2 mb2">
+                <div class="inline-form displayFlex flexWrap itemsCenter wFull mt2 mb2">
                     <!-- <label for="" class="textXs textGray4 mr1">Email</label> -->
                     <input type="email" name="" id="" placeholder="abc@company.com" class="flexGrow p2 rounded border borderGray3">
                     <button class="textWhite bgBlue4 hover:bgBlue6 border borderBlue5 rounded textCenter p2 ml2">Subscribe</button>
