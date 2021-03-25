@@ -11,6 +11,7 @@ import Badges from './components/doc_components/Badges';
 import Buttons from './components/doc_components/Buttons';
 import Images from './components/doc_components/Images';
 import Inputs from './components/doc_components/Inputs';
+import Navbars from './components/doc_components/Navbars';
 
 import Cards from './components/doc_patterns/Cards';
 import Forms from './components/doc_patterns/Forms';
@@ -79,6 +80,7 @@ function App() {
           { activeTopicName === 'Buttons' && <Buttons />}
           { activeTopicName === 'Images' && <Images />}
           { activeTopicName === 'Inputs' && <Inputs />}
+          { activeTopicName === 'Navbars' && <Navbars />}
           { activeTopicName === 'Cards' && <Cards />}
           { activeTopicName === 'Forms' && <Forms />}
           { activeTopicName === 'Hero Sections' && <HeroSections />}
