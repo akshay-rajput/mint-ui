@@ -4,7 +4,96 @@
 .app-main{
     grid-template-rows: minmax(100vh, 1fr);
 }
+button:focus,
+input:focus,
+textarea:focus{
+    outline: 1px solid #ccc !important;
+}
+
 pre[class*="language-"] {
     margin-bottom: 0 !important;
     margin-top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: auto;
+}
+code{
+    overflow: auto !important;
+    display: block !important;
+    /* width: 100% !important; */
+}
+
+pre::-webkit-scrollbar{
+    width: 4px !important;
+}
+code::-webkit-scrollbar {
+    height: 2px !important;
+}
+  
+/* Track */
+code::-webkit-scrollbar-track {
+    background: #aefcf8;
+  }
+  
+  /* Handle */
+  code::-webkit-scrollbar-thumb {
+    background: rgb(36, 150, 135);
+  }
+  
+  /* Handle on hover */
+  code::-webkit-scrollbar-thumb:hover {
+    background: rgb(14, 99, 102);
+  }
+
+/* large screens */
+@media(min-width: 768px){
+    .app-sidebar{
+        /* display is set to none inside jsx file */
+        position: relative;
+        /* display: block; */
+    }
+    .app-index-toggle{
+        display: none;
+    }
+    
+}
+
+
+/* mobile */
+@media(max-width: 767px){
+    .app-code{
+        /* prevents horizontal scroll due to code */
+        width: calc(100vw - 3.4rem);
+    }
+    pre{
+        max-height: 400px;
+    }
+    
+    /* sidebar index */
+    .app-sidebar{
+        /* display is set to none inside jsx file */
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        transition: all ease 0.35s;
+        position: fixed;
+        max-height: 100%;
+        overflow-y: auto;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .app-index-toggle{
+        position: fixed;
+        z-index: 2;
+        bottom: 1.5rem;
+        right: 0.75rem;
+    }
+    .showOnMobile{
+        display: block;
+    }
+    .hideOnMobile{
+        display: none;
+    }
 }

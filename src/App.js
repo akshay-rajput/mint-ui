@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import appIndex from '../src/topicList'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar';
@@ -23,8 +23,16 @@ function App() {
   const [activeTopicName, setActiveTopicName] = useState('Introduction');
   const [isMobileMenuOpen, setMobileMenu] = useState(false) 
 
+  useEffect(() => {
+    if(isMobileMenuOpen){
+      document.body.style.overflow = 'hidden';
+    }
+    else{
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMobileMenuOpen])
+
   function toggleMobileMenu(){
-    console.log('call toggle')
     setMobileMenu(prevState => !prevState);
   }
   
@@ -66,7 +74,7 @@ function App() {
   }
 
   return (
-    <div className="App bgWhite displayFlex flexCol" style={{overflowY : isMobileMenuOpen ? 'hidden': 'auto'}}>
+    <div className="App bgWhite displayFlex flexCol">
       <header>
         <Navbar></Navbar>
       </header>
@@ -96,7 +104,8 @@ function App() {
 
         </div>
         
-        <button onClick={toggleMobileMenu} className="app-index-toggle bgTeal4 hover:bgTeal6 hover:textWhite borderNone roundedFull p3">
+        <button onClick={toggleMobileMenu} style={{right: isMobileMenuOpen ? '1rem':''}}
+                className="app-index-toggle bgTeal4 hover:bgTeal6 hover:textWhite borderNone roundedFull p3">
           <i className={ isMobileMenuOpen ? "fas fa-times":"fas fa-bars"}></i>
         </button>
       </main>
