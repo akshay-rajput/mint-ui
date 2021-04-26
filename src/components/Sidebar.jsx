@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 export default function Sidebar({topicList, isMobileMenuOpen, updateTopic}) {
 
     return (
-        <div className={"app-sidebar p4 md:pl8 md:pr4 bgGray1 textGray5 gridColSpan12 md:gridColSpan3 "+ (isMobileMenuOpen?'showOnMobile' : 'hideOnMobile')}>
+        <div className={"app-sidebar p4 md:pl8 md:pr4 pb12 bgGray1 textGray5 "+ (isMobileMenuOpen?'showOnMobile' : 'hideOnMobile')}>
             <div className="">
                 {  topicList.map( section => {
                     const sectionHeadings = Object.keys(section);
@@ -25,8 +25,8 @@ export default function Sidebar({topicList, isMobileMenuOpen, updateTopic}) {
                                                     section[sectionName].map(topicName => {
                                                         /* console.log('topicName: ', topicName.name + ' -- active: ', topicName.active) */
                                                         return(
-                                                            <li key={uuidv4()} onClick={() => updateTopic(sectionName, topicName)} style= {{color: topicName.active ? 'slateblue': '', borderLeft: topicName.active ? '2px solid slateblue': ''}}
-                                                                    className="borderNone displayBlock bgTransparent textGray4 hover:textBlue4 hover:bgWhite textRg fontSemiBold cursorPointer p1 md:pl2 mb1">
+                                                            <li key={uuidv4()} onClick={() => updateTopic(sectionName, topicName)} style= {{color: topicName.active ? 'teal': '', borderLeft: topicName.active ? '3px solid teal': '',backgroundColor: topicName.active ? 'white': ''}}
+                                                                    className="borderNone displayBlock bgTransparent textGray4 hover:textTeal4 hover:bgWhite textRg fontSemiBold cursorPointer p1 md:pl2 mb1">
                                                                 {topicName.name}
                                                             </li>
                                                         )
