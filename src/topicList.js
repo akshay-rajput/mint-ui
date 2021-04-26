@@ -70,75 +70,70 @@ const appIndex = [
         ]
     },
     
-    // {
-    //     'Classes': [
-    //         {
-    //             name: 'Background color',
-    //             component: 'BackgroundColor',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Border Color',
-    //             component: 'BorderColor',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Flex',
-    //             component: 'Flex',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Grid',
-    //             component: 'Grid',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Font Style',
-    //             component: 'FontStyle',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Margin',
-    //             component: 'Margin',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Padding',
-    //             component: 'Padding',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Shadow',
-    //             component: 'Shadow',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Text color',
-    //             component: 'TextColor',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Text size',
-    //             component: 'TextSize',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Height',
-    //             component: 'Height',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Width',
-    //             component: 'Width',
-    //             active: false
-    //         },
-    //         {
-    //             name: 'Utilities',
-    //             component: 'Utilities',
-    //             active: false
-    //         },
-    //     ]
-    // },
+    {
+        'Classes': [
+            {
+                name: 'Background color',
+                component: 'BackgroundColor',
+                active: false
+            },
+            {
+                name: 'Border Color',
+                component: 'BorderColor',
+                active: false
+            },
+            {
+                name: 'Flex',
+                component: 'Flex',
+                active: false
+            },
+            {
+                name: 'Grid',
+                component: 'Grid',
+                active: false
+            },
+            {
+                name: 'Font Style',
+                component: 'FontStyle',
+                active: false
+            },
+            {
+                name: 'Margin',
+                component: 'Margin',
+                active: false
+            },
+            {
+                name: 'Padding',
+                component: 'Padding',
+                active: false
+            },
+            {
+                name: 'Text color',
+                component: 'TextColor',
+                active: false
+            },
+            {
+                name: 'Text size',
+                component: 'TextSize',
+                active: false
+            },
+            {
+                name: 'Height',
+                component: 'Height',
+                active: false
+            },
+            {
+                name: 'Width',
+                component: 'Width',
+                active: false
+            },
+            {
+                name: 'Utilities',
+                component: 'Utilities',
+                active: false
+            },
+        ]
+    },
 ]
 
 export default appIndex;
