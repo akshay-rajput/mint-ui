@@ -5,7 +5,7 @@ import CodeDemo from '../CodeDemo'
 export default function Navbars() {
     
     const navbarLeftCode = 
-    `<nav class="displayFlex justifyBetween itemsCenter bgRose1 rounded pt2 pb2 pl4 pr4">
+    `<nav class="displayFlex justifyBetween itemsCenter bgRose1 rounded pt2 pb2 pl4 pr4" id="navbar_example1">
         <div class="displayFlex itemsCenter">
             <a href="#" class="h12 w12 p1 mr4">
                 <img src="https://www.pngitem.com/pimgs/m/359-3592112_icons-mint-linux-mint-start-menu-icons-hd.png" alt="" class="wFull">
@@ -33,7 +33,7 @@ export default function Navbars() {
     </nav>`;
     
     const navbarCenterCode = 
-    `<nav class="displayFlex justifyBetween itemsCenter bgRose1 rounded pt2 pb2 pl4 pr4">
+    `<nav class="displayFlex justifyBetween itemsCenter bgRose1 rounded pt2 pb2 pl4 pr4" id="navbar_example2">
         <a href="#" class="h12 w12 p1">
             <img src="https://www.pngitem.com/pimgs/m/359-3592112_icons-mint-linux-mint-start-menu-icons-hd.png" alt="Logo" class="wFull">
         </a>
@@ -59,7 +59,7 @@ export default function Navbars() {
     </nav>`;
 
     const navbarRightCode =
-    `<nav class="displayFlex justifyBetween itemsCenter bgRose1 rounded pt2 pb2 pl4 pr4">
+    `<nav class="displayFlex justifyBetween itemsCenter bgRose1 rounded pt2 pb2 pl4 pr4" id="navbar_example3">
         <a href="#" class="h12 w12 p1 mr4">
             <img src="https://www.pngitem.com/pimgs/m/359-3592112_icons-mint-linux-mint-start-menu-icons-hd.png" alt="" class="wFull">
         </a>
