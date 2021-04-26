@@ -1,9 +1,30 @@
 .App{
     min-height: 100vh;
 }
-.app-main{
-    grid-template-rows: minmax(100vh, 1fr);
+::-webkit-scrollbar{
+    width: 6px;
 }
+::-webkit-scrollbar-track{
+    background: #aefcf8;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(60, 194, 199);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: teal;
+}
+/* navbar */
+.app-navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+.app-main{
+    padding-top: 5rem;
+    /* grid-template-rows: minmax(100vh, 1fr); */
+}
+  
 button:focus,
 input:focus,
 textarea:focus{
@@ -26,7 +47,7 @@ code{
 pre::-webkit-scrollbar{
     width: 4px !important;
 }
-code::-webkit-scrollbar {
+code::-webkit-scrollbar, .preview-box::-webkit-scrollbar {
     height: 2px !important;
 }
   
@@ -45,22 +66,57 @@ code::-webkit-scrollbar-track {
     background: rgb(14, 99, 102);
   }
 
+.logofont{
+    /* font-family: 'Pacifico','Oxygen', 'Ubuntu', sans-serif; */
+    font-family: 'MuseoModerno', 'Oxygen', sans-serif;
+}
+footer{
+    position: relative;
+}
+footer .btn-to-top {
+    position: absolute;
+    right: 2rem;
+    bottom: 0.75rem;
+}
+
 /* large screens */
 @media(min-width: 768px){
     .app-sidebar{
         /* display is set to none inside jsx file */
-        position: relative;
-        /* display: block; */
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 225px;
+        padding-top: 5rem;
+        overflow-y: auto;
+    }
+    .app-sidebar::-webkit-scrollbar{
+        width: 2px;        
+    }
+    .app-sidebar::-webkit-scrollbar-thumb{
+        background: rgb(134, 226, 226);
+    }
+
+    .app-main{
+        margin-left: 225px;
     }
     .app-index-toggle{
         display: none;
     }
     
+    footer{
+        z-index: 2;
+    }
 }
 
 
 /* mobile */
 @media(max-width: 767px){
+    ::-webkit-scrollbar{
+        width: 4px;
+    }
     .app-code{
         /* prevents horizontal scroll due to code */
         width: calc(100vw - 3.4rem);
@@ -72,7 +128,7 @@ code::-webkit-scrollbar-track {
     /* sidebar index */
     .app-sidebar{
         /* display is set to none inside jsx file */
-        padding-top: 4rem;
+        padding-top: 5rem;
         padding-bottom: 4rem;
         transition: all ease 0.35s;
         position: fixed;
@@ -96,4 +152,9 @@ code::-webkit-scrollbar-track {
     .hideOnMobile{
         display: none;
     }
+
+    #navbar_example1, #navbar_example2, #navbar_example3{
+        width: max-content;
+    }
+
 }
