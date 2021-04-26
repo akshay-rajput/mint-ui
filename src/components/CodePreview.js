@@ -10,7 +10,7 @@ export default function CodePreview({code}) {
     }, [code])
 
     return (
-        <div className=" p2 pb1"  style={{borderTop: '1px solid #ddd'}} 
+        <div className="preview-box p2 pb1"  style={{borderTop: '1px solid #ddd', overflowX: 'auto'}} 
             ref={previewBox}>
             
         </div>
